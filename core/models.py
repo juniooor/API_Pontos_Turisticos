@@ -5,12 +5,13 @@ from avaliacoes.models import Avaliacao
 from comentarios.models import Comentario
 from enderecos.models import Endereco
 
+
 class PontoTuristico(models.Model):
     nome = models.CharField(max_length=150)
     descricao = models.TextField()
     aprovado = models.BooleanField(default=False)
-    atracoes = models.ManyToManyField(Atracao, related_name='pontos_turisticos')
-    comentarios = models.ManyToManyField(Comentario, related_name='pontos_turisticos')
+    atracoes = models.ManyToManyField(Atracao)
+    comentarios = models.ManyToManyField(Comentario)
     avaliacao = models.ManyToManyField(Avaliacao)
     endereco = models.ManyToManyField(Endereco)
     
