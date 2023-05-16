@@ -17,13 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
-
+from avaliacoes.api.viewset import AvaliacoesViewset
 from core.api.viewset import PontoTuristicoViewset
 from atracoes.api.viewset import AtracoesViewset
 
 router = routers.DefaultRouter()
 router.register(r"pontosturisticos", PontoTuristicoViewset)
 router.register(r"atracoes", AtracoesViewset)
+router.register(r"avaliacoes", AvaliacoesViewset)
 
 urlpatterns = [
     path("", include(router.urls)),
