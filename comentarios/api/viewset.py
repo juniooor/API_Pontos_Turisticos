@@ -5,6 +5,6 @@ from comentarios.models import Comentario
 from .serializers import ComentarioSerializer
 
 
-class ComentariosViewset(ModelViewSet):
+class ComentarioViewset(ModelViewSet):
     queryset = Comentario.objects.all()
     serializer_class = ComentarioSerializer
