@@ -16,3 +16,6 @@ class PontoTuristicoViewset(ModelViewSet):
         if "aprovados" in self.request.query_params:
             queryset = queryset.filter(aprovado=True)
         return queryset
+
+    def destroy(self, request, *args, **kwargs):
+        pass
