@@ -1,2 +1,46 @@
-.vscode
-venv
+# Arquivos e diretórios específicos do Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+__pycache__
+# Arquivos de configuração do ambiente
+.env
+.env.*
+__pycache__
+# Arquivos de mídia
+media/
+
+# Arquivos de banco de dados
+*.sqlite3
+
+# Diretório de arquivos estáticos coletados
+staticfiles/
+
+# Dependências geradas pelo Python
+venv/
+env/
+*/.venv/
+pip-selfcheck.json
+
+# Diretório de arquivos de mídia gerados
+uploads/
+
+# Arquivos e diretórios de testes
+.tox/
+.coverage
+htmlcov/
+
+# Arquivos do IDE
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Arquivos de registros
+logs/
+*.log
+
+# Outros arquivos e diretórios
+*.swp
+.DS_Store
