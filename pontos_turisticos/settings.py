@@ -91,7 +91,15 @@ WSGI_APPLICATION = "pontos_turisticos.wsgi.application"
 import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.config(default='DATABASE_URL')
+    'default': {
+        #'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'eXl8qhthfNcH6iSssXDQ',
+        'HOST': 'containers-us-west-194.railway.app',
+        'PORT': '6430',
+    }
 }
 
 
